@@ -1,0 +1,55 @@
+<!--
+For begin a good software developer we need to be curious 
+for every small thing, what is happening, why it's happening.
+
+HomeWork:
+ What's CDN, What is cross-origin 
+ 
+ Learning: 
+    1) How to write "Hello World" using simple HTML, then using Javascript
+    2) How to inject React into our Project using those two CDN links
+    3) How to write "Hello World" using React
+    4) Why and how to create root in React, how this is different from JS.
+    -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div>
+        <h1>Hello World!</h1>
+    </div>
+    <!-- Making heading using JS -->
+    <div id="root"></div>
+    <div id="root1"></div>
+
+    <div id="root2">
+        <h1>Replace has happened.</h1>
+    </div>
+
+    <script>
+        const heading = document.createElement("h1");
+        heading.innerHTML = "Hello World using JS";
+        // Now we've created the element, we need to append it to root
+        const root =document.getElementById("root");
+        root.appendChild(heading);
+
+        
+    </script>
+    <!-- Now using below links, we've included React in our project, we've injected 
+     React in our project. This is one of the way to inject React in our project. -->
+
+     <!--  I)  This Ist file is of Core React
+           II) Second link contains file React for DOM manipulation. -->
+
+   <script src="./App.js">
+   </script>
+</body>
+</html>
